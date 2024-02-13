@@ -8,7 +8,7 @@ from PIL import Image
 def main():
   st.set_page_config(page_title="Maddy website",page_icon="🫥", layout="wide")
   current_dir = Path(__file__).parent if "__file__" in locals() else Path.cwd()
-  image = Image.open(current_dir/"image"/"img.PNG")
+  image = Image.open(current_dir/"image"/"img.png")
 
 #____ header _____
   with st.container():
