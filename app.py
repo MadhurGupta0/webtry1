@@ -1,6 +1,6 @@
 import streamlit as st
 import requests as res
-from streamlit_lottie import st_lottie
+#from streamlit_lottie import st_lottie
 from pathlib import Path
 from PIL import Image
 
@@ -17,7 +17,7 @@ def main():
     st.title("this is just a fun project")
     st.write ("Welcome,This is link to my "+"[linkden account>](https://colab.research.google.com/drive/1igmiGImbaNTiWRdJ0EQknAzKG_iDCoGh?authuser=0#scrollTo=8-lCreENOKrU)")
 #-------
-  lottie_ff= lottie_url("https://lottie.host/f50a4fa7-89d1-424a-94db-0bfc3fd58488/RzZloYluvQ.json")
+ # lottie_ff= lottie_url("https://lottie.host/f50a4fa7-89d1-424a-94db-0bfc3fd58488/RzZloYluvQ.json")
   with st.container():
       st.write("---")
       lcol,rcol=st.columns(2,gap="large")
@@ -33,8 +33,8 @@ def main():
            
           """)
           st.write("[you can click on an suspious link](https://colab.research.google.com/drive/1igmiGImbaNTiWRdJ0EQknAzKG_iDCoGh?authuser=0#scrollTo=8-lCreENOKrU)")
-      with rcol:
-          st_lottie(lottie_ff,height=400,key="random")
+     # with rcol:
+     #    st_lottie(lottie_ff,height=400,key="random")
   with st.container():
           st.write("---")
           st.header("A random photo to comment")
@@ -54,11 +54,11 @@ def main():
               st.markdown("[image source...](https://genshin.hoyoverse.com/en)")
 
 
-def lottie_url(url):
-    r= res.get(url)
-    if r.status_code != 200:
-        return None
-    return r.json()
+#def lottie_url(url):
+ #   r= res.get(url)
+  #  if r.status_code != 200:
+   #     return None
+    #return r.json()
 
 
 if __name__=="__main__":
